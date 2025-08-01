@@ -4,7 +4,9 @@ import { buffer } from "stream/consumers";
 const mongoDbUrl = process.env.MONGODB_URL!
 const mongoDbName = process.env.MONGODB_DB_NAME!
 
-if(mongoDbUrl){
+
+
+if(!mongoDbUrl){
     throw new Error("MongoDb Url is missing")
 }
 
